@@ -1,0 +1,126 @@
+/* Modern Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.home-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #1a1d29;
+  overflow: hidden;
+  font-family: 'Poppins', 'Inter', 'Roboto', sans-serif;
+}
+
+.map-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/wmap2.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(0px);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.title-container {
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 3.5rem;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.enter-button {
+  margin-top: 30px;
+  padding: 16px 48px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Quicksand', 'Comfortaa', 'Nunito', sans-serif;
+  font-style: italic;
+}
+
+.enter-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.enter-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design for HomePage */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .enter-button {
+    padding: 14px 36px;
+    font-size: 1.1rem;
+  }
+  
+  .title-container {
+    padding: 30px 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .enter-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+  
